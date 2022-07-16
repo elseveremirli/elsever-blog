@@ -1,0 +1,15 @@
+.div{
+    width: 150px;
+    height: 300px;
+    margin: 0 auto;
+}
+.div-b{
+    display: inline-block;
+    margin-top: 100px;
+}
+
+.noadmin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
