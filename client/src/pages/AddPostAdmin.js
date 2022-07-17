@@ -8,13 +8,13 @@ function AddPostAdmin() {
 
 
     const [password,setPassword] = useState()
-    const [True,setTrue] = useState(0)
+    const [True1,setTrue1] = useState(0)
     
     const handleClick = ()=>{
         if(password == "elsever2006emirli" ){
-            setTrue(1)
+            setTrue1(1)
         }
-        else(alert('Wrong Password'),setTrue(0))
+        else(alert('Wrong Password'),setTrue1(0))
     }
 
 
@@ -53,7 +53,7 @@ function AddPostAdmin() {
             </div>
         </div>
         {
-            True == 1 ? <AddPost/> : <NoAdmin/>
+            True1 == 1 ? <AddPost/> : <NoAdmin/>
         }
     </div>
   
