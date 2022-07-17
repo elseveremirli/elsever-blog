@@ -14,7 +14,9 @@ function AddPostAdmin() {
         if(password == "elsever2006emirli" ){
             setTrue1(1)
         }
-        else(alert('Wrong Password'),setTrue1(0))
+        else( 
+        setTrue1(0)
+        )
     }
 
 
