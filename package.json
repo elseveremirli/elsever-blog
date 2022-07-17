@@ -1,8 +1,8 @@
 {
   "name": "api",
   "engines" : { 
-    "npm" : ">=8.13.2",
-    "node" : ">=18.0.0"
+    "npm" : "8.13.2",
+    "node" : "18.0.0"
   },
   "version": "1.0.0",
   "description": "",
