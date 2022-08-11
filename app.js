@@ -9,10 +9,10 @@ app.use(express.json())
 require('dotenv').config()
 
 const db = mysql.createConnection({
-    user: process.env.NAME,
-    host: process.env.HOST,
-    password: process.env.PASSWORD,
-    database: process.env.DATABASE,
+    user: "b5ed560acf9a93",
+    host: "eu-cdbr-west-03.cleardb.net",
+    password: "3a5360c5",
+    database: "heroku_386f5da92ab81d8",
     insecureAuth : true,
 })
 
@@ -80,11 +80,11 @@ app.get('/post',(req,res)=>{
 }) 
 
 
-app.use(express.static(path.join(__dirname, "/client/build")));
+// app.use(express.static(path.join(__dirname, "/client/build")));
 
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '/client/build/public', 'index.html'));
-});
+// app.get('*', (req, res) => {
+//   res.sendFile(path.join(__dirname, '/client/build/public', 'index.html'));
+// });
 
 const PORT = process.env.PORT || 3002
 
