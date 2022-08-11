@@ -12,7 +12,7 @@ function AddPost() {
 
     const handleClick = async (e)=>{
         e.preventDefault()
-        const x =  await  axios.post('https://elsever-blog.herokuapp.com/addpost',{ PostName:PostName,PostPhotoUrl:PostPhotoUrl,PostPlacer:PostPlacer,PostAbout:PostAbout,PostFullAbout:PostFullAbout })
+        const x =  await  axios.post('/addpost',{ PostName:PostName,PostPhotoUrl:PostPhotoUrl,PostPlacer:PostPlacer,PostAbout:PostAbout,PostFullAbout:PostFullAbout })
         return  <Navigate to='/post' />
     }
 
