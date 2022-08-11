@@ -80,10 +80,10 @@ app.get('/post',(req,res)=>{
 }) 
 
 
-app.use(express.static(path.join(__dirname, "..", "build")));
+app.use(express.static(path.join(__dirname, ".", "build")));
 app.use(express.static("public"));
 app.use((req, res, next) => {
-    res.sendFile(path.join(__dirname, "..", "build", "index.html"));
+    res.sendFile(path.join(__dirname, ".", "build", "index.html"));
   });
 
 app.get('*', (req, res) => {
