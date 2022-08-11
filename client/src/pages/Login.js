@@ -17,7 +17,7 @@ function Login() {
 
   const handleClick = async (e)=>{
     e.preventDefault()
-    const x = await axios.post('/login',{name: user, password:password})
+    const x = await axios.post('https://elsever-blog.herokuapp.com/login',{name: user, password:password})
 
     if(x.data.message || x.data.err ){
       dispatch(increment(false))
