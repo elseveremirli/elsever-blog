@@ -10,7 +10,7 @@
   "homepage": "https://myapp.herokuapp.com/",
   "scripts": {
     "start": "node app.js",
-    "heroku-postbuild": "cd client && npm install && npm run build"
+    "heroku-postbuild": "npm install && cd client && npm install && npm run build"
   },
   "keywords": [],
   "author": "",
