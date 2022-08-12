@@ -80,15 +80,11 @@ app.get('/post',(req,res)=>{
 }) 
 
 
-app.use(express.static(path.join(__dirname, ".", "build")));
-app.use(express.static("public"));
-app.use((req, res, next) => {
-    res.sendFile(path.join(__dirname, ".", "build", "index.html"));
-  });
+app.use(express.static(path.join(__dirname, "/client/build")));
 
-// app.get('*', (req, res) => {
-//   res.sendFile(path.join(__dirname, '/client/build/index.html'));
-// });
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '/client/build/public', 'index.html'));
+});
 
 const PORT = process.env.PORT || 3002
 
