@@ -25,7 +25,7 @@ function Post() {
 
 
               {
-                posts?.map((post,index)=>{
+                posts ? posts.map((post,index)=>{
                   return(
                                   
                 <div className="mb-0" key={index} >
@@ -59,7 +59,7 @@ function Post() {
               </div>
               )
 
-                })
+                }) : <div></div>
               }
 
 
