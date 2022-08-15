@@ -8,7 +8,7 @@ function Post() {
   useEffect(()=>{
     axios.get('https://elsever-backend.herokuapp.com/post')
     .then((response)=>{setPosts(response.data)})
-  })
+  },[])
 
   return (
     <div>
