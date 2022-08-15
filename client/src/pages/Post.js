@@ -3,11 +3,11 @@ import axios from 'axios'
 
 function Post() {
 
-  const [posts,setPosts] = useState([{}])
+  const [posts,setPosts] = useState([{"PostName":"Latest articles","PostPhotoUrl":"https://mdbcdn.b-cdn.net/img/new/standard/city/024.webp","PostPlacer":"Joe Svan","PostAbout":"\t \t                        Curabitur tristique, mi a mollis sagittis, metus felis mattis                         arcu, non vehicula nisl dui quis diam. Mauris ut risus eget                         massa volutpat feugiat. Donec.                       Curabitur tristique, mi a mollis sagittis, metus felis mattis                         arcu, non vehicula nisl dui quis diam. Mauris ut risus eget                         massa volutpat feugiat. Donec.","PostFullAbout":"/404"},{"PostName":"Menzere","PostPhotoUrl":"https://mdbootstrap.com/img/new/standard/nature/182.jpg","PostPlacer":"Elsever Emirli","PostAbout":"Some quick example text to build on the card title and make up the bulk of the card's content.","PostFullAbout":"/404"},{"PostName":"Some","PostPhotoUrl":"https://mdbootstrap.com/img/new/standard/nature/184.jpg","PostPlacer":"Elsever Emirli","PostAbout":"Some quick example text to build on the card title and make up the bulk of the card's content.","PostFullAbout":"/404"}])
 
   useEffect(()=>{
-    axios.get('https://elsever-backend.herokuapp.om/post')
-    .then((response)=>{console.log(response.data)})
+    axios.get('https://elsever-backend.herokuapp.com/post')
+    .then((response)=>{console.log(`Error ${response.data}`)})
   })
 
   return (
