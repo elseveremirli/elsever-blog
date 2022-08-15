@@ -3,7 +3,7 @@ import axios from 'axios'
 
 function Post() {
 
-  const [posts,setPosts] = useState([])
+  const [posts,setPosts] = useState(false)
 
   useEffect(()=>{
     axios.get('https://elsever-blog.herokuapp.com/api/post')
