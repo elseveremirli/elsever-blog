@@ -11,7 +11,7 @@ function Register() {
 
   const handleClick = (e)=>{
     e.preventDefault()
-    axios.post('https://elsever-blog.herokuapp.com/register',{name: username, password: userpassword }).then((response)=>{
+    axios.post('https://elsever-blog.herokuapp.com/api/register',{name: username, password: userpassword }).then((response)=>{
       console.log("Getdi"+response)
       setgetdi(true)
     })

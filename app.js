@@ -22,7 +22,7 @@ db.connect((err)=>{
     console.log('Connet');
 
 
-app.post('/login',(req,res)=>{
+app.post('api/login',(req,res)=>{
     const name = req.body.name
     const password = req.body.password
     
@@ -42,7 +42,7 @@ app.post('/login',(req,res)=>{
 
 
 
-app.post('/register',(req,res)=>{
+app.post('api/register',(req,res)=>{
     const name = req.body.name
     const password = req.body.password
     
@@ -55,7 +55,7 @@ app.post('/register',(req,res)=>{
      
 })
 
-app.post('/addpost',(req,res)=>{
+app.post('api/addpost',(req,res)=>{
     const PostName = req.body.PostName
     const PostPhotoUrl = req.body.PostPhotoUrl
     const PostPlacer = req.body.PostPlacer
@@ -69,7 +69,7 @@ app.post('/addpost',(req,res)=>{
 })
 
 
-app.get('/post',(req,res)=>{
+app.get('api/post',(req,res)=>{
     db.query('SELECT * FROM addpost',(err,result)=>{
         if(err){res.send(err)}
         if(result){res.send(result)}
